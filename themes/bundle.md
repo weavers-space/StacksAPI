@@ -33,7 +33,7 @@ Contents/Resources/Templates/theme_overrides
 Contents/Resources/Templates/basic_theme_overrides
 ```
 
-The schema does not fully describe the purpose or required contents of the two override locations. Treat them as implementation details until their behaviour is verified.
+**Binary:** Templates are loaded recursively from `Contents/Resources/Templates`, and a template's identity is its frontmatter `id`. The `theme_overrides` and `basic_theme_overrides` folders are therefore only a naming convention used by the bundled Base and Sample themes to group the templates a child theme is expected to override (`theme_css`, `theme_js`, `theme_meta`, `theme_foot`). Any folder name works.
 
 ## Info.plist
 

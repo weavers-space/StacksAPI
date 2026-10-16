@@ -52,6 +52,7 @@ Pages in this section use the following labels:
 - **Bundled theme** — demonstrated by Base, Blank or Sample.
 - **Observed** — verified during development, but not formally specified.
 - **Unconfirmed** — accepted or suggested by available files, but its complete behaviour is unknown.
+- **Binary** — recovered from the Stacks 6.0 beta 75.1 application's template-engine metadata (class, selector and string inventories), not yet verified by rendering. Treat as strong evidence of what the parser accepts, not as a behavioural contract.
 
 ## What a theme controls
 

@@ -58,6 +58,15 @@ The schema recognises these optional root properties:
 
 The schema describes the plist as open-ended at runtime. Unknown properties should therefore be preserved by authoring tools even when they cannot be edited.
 
+## Theme API version limits
+
+**Binary:** The loader reads `minThemeAPIVersion` and `maxThemeAPIVersion` (case-insensitive variants are accepted) and refuses to use a theme outside that range with the message "This add-on works only with Theme API version N or greater/less". Stacks 6.0 reports Theme API version `60000`. Only set a minimum when a theme depends on a feature that older versions lack.
+
+```xml
+<key>minThemeAPIVersion</key>
+<integer>60000</integer>
+```
+
 ## Version values
 
 The bundled themes use a user-facing dotted version and a monotonically increasing build string:

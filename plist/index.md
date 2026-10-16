@@ -45,3 +45,12 @@ The Info.plist file within a stack defines the basic attributes of the stack lik
 
 {% endfor %}
 </ul>
+
+### Keys read by Stacks that are not yet documented
+
+The Stacks 5.3 and 6.0 loaders also read the following keys. Their behaviour has not been confirmed, so they are listed here rather than given reference pages. Authoring tools should preserve them.
+
+- `proApi` and `compiler` — declared capabilities that pair with the [`%supportsProApi%` and `%supportsCompiler%`]({% include docs-root.html %}/templates/supports) templates.
+- `libraryImageFile` — an alternative library icon file.
+- `minRWVersion` — a RapidWeaver version floor used by some Stacks 5 built-in stacks.
+- `maxChildCount` — read next to `addTypes`/`allowedTypes` in Stacks 6 (compare `maxChildren` on [`%slice%`]({% include docs-root.html %}/templates/slice)).

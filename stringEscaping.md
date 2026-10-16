@@ -21,7 +21,7 @@ Stacks provides access to the RapidWeaver string escaping API. You can specify a
 * `-encodeHTML` - HTML  — Encoded for display on an HTML page (markup characters are hexadecimal encoded).
 * `-encodeHTMLAttribute` - HTML Attribute  — Encoded for use inside a double quoted HTML attribute (e.g. `target="blank"`).
 * `-encodeXML` - XML  — Encoded for use inside XML strings.
-* `-encodeFilename` - Filename  — Encoded for use as a file name on most file systems.
+* `-encodeFile` - Filename  — Encoded for use as a file name on most file systems. (The flag is `encodeFile`; `encodeFilename` is not recognised.)
 
 
 #### Example 1: showing various outputs using various encodings

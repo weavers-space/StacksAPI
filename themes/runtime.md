@@ -105,3 +105,39 @@ Sample suggests temporarily outputting an object during development:
 ```
 
 Use this only in a local test theme. Runtime objects may contain verbose implementation details and their unescaped representation may not be appropriate for public output.
+
+## Additional runtime keys
+
+**Binary:** The export context that feeds theme templates resolves the following keys in addition to the ones demonstrated above. Names are exact; the value shapes are inferred from the name and from how the bundled themes use similar keys.
+
+### Theme and layout paths
+
+| Key | Meaning |
+|---|---|
+| `themePath` | Published folder of the current theme (`:(themePath):/assets/...`). |
+| `themeAssetPath` | Published folder for the theme's declared `assets`. |
+| `themeCssPath` / `themeJsPath` / `themePhpPath` | The theme's exported `stacks.css`, `stacks.js` and `stacks.php`. |
+| `siteThemesPath` | Parent folder that holds every published theme. |
+| `layoutPath` | Published folder of the current layout. |
+| `layoutCssPath` / `layoutJsPath` / `layoutPhpPath` | The layout's exported CSS, JavaScript and PHP files. |
+| `siteCssPath` / `siteJsPath` / `sitePhpPath` | Site-scoped generated files. |
+| `pageCssPath` / `pageJsPath` / `pagePhpPath` / `pageAssetPath` | Page-scoped generated files and page assets. |
+
+### Navigation and page metadata
+
+| Key | Meaning |
+|---|---|
+| `navTitle` | Navigation title of the current page. |
+| `navLink` | Link to the current page as used in navigation. |
+| `breadcrumbs` (also `breadCrumbs`, `breadcrumb`, `breadCrumb`, `crumb`) | Breadcrumb trail for the current page. The Sample theme iterates `breadcrumbs`. |
+| `navigation` | Navigation tree (shape **Unconfirmed**; `site.pages.children` is the demonstrated route). |
+| `domain`, `urlString`, `copyright`, `baseURL` | Site settings, also reachable as `site.domain` and so on. |
+| `jQueryCompatibility` | The site's jQuery compatibility setting. |
+
+### Export bookkeeping
+
+`exportFileName`, `exportFilePath`, `exportFolderName`, `exportFolderPath`, `assetFolderName`, `siteAssetFolderName` and `sharedExportFolder` describe where the current page is being written. They are implementation details and should not be relied on in a distributed theme.
+
+### Versions
+
+`stackAPIVersion`, `themeAPIVersion`, `stacksVersion`, `stacksBuild` and the `macOS*Version` keys from the Stack API are available. Stacks 6.0 reports Theme API version `60000` and Stack API version `1500`.

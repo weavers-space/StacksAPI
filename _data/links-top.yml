@@ -26,3 +26,7 @@
   - title: Resources
     url: /resources
     description: All the other stuff that's included in a stack.
+
+  - title: Stacks MCP Server
+    url: /mcp
+    description: Drive the open Stacks project from an AI agent or script.
